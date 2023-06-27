@@ -1,0 +1,390 @@
+*{padding: 0;
+margin: 0;
+box-sizing: border-box;}
+
+.head{
+height: 5%;
+	width: 100vw;
+/*	border: 2px solid red;*/
+	
+}
+body{
+	background: linear-gradient( #c35d38 65%, #341d07);
+	width: 100vw;
+	height: 100vh;
+	
+}
+.napoveda {
+    width: 10%;
+    height: 7%;
+    display: block;
+    position: absolute;
+    top: 1%;
+    right: 13%;
+	cursor: pointer;
+	z-index: 12000000000;
+}
+#pravidla{
+	background: #1fb15d;
+	display: none;
+	    position: absolute;
+    border: 2px solid red;
+    width: auto;
+    height: auto;
+    left: 0%;
+    top: 0%;
+    z-index: 1200000000;
+}
+
+.allgame{
+	
+	height: 90%;
+	width: 100vw;
+	
+
+}
+
+.card{
+	display: inline-block;
+	margin-left: 3px;
+}
+#dark1{
+position: absolute;
+	left:44%;
+	bottom: 10%;
+	display: none;
+	
+}
+#dark2{
+position: absolute;
+	left:10%;
+	bottom: 48%;
+	display: none;
+	
+}
+#dark3{
+position: absolute;
+	left:44%;
+	top: 7%;
+	display: none;
+	
+}
+#dark4{
+position: absolute;
+	right:10%;
+	bottom: 44%;
+	display: none;
+	
+	
+}
+
+.player1card{
+top: 74%;
+left: 26%;
+	position: absolute;
+	width: 80%;
+	height: 15%;
+/*	border: 2px solid blue;*/
+	}
+.player1card img{
+	opacity: 0.8;
+}
+
+.player2card{
+top: 15%;
+left: 7%;
+	position: absolute;
+	width: 16%;
+height: 80%;
+/*	border: 2px solid blue;*/
+	}
+.player2card img{
+}
+
+
+.player3card{
+top: 8%;
+left: 26%;
+	position: absolute;
+	width: 80%;
+	height: 15%;
+/*	border: 2px solid blue;*/
+	}
+
+
+.player4card{
+top: 15%;
+right: 7%;
+	position: absolute;
+	width: 16%;
+height: 80%;
+/*	border: 2px solid blue;*/
+	}
+
+
+
+#tablecard1{
+	position: absolute;
+	top:49%;
+	left: 45%;
+	z-index: 1000;
+	display: none;
+}
+
+#tablecard2{
+	position: absolute;
+	top:38%;
+	left: 40%;
+	z-index: 1000;
+	display: none;
+}
+
+#tablecard3{
+	position: absolute;
+	top:32%;
+	left: 45%;
+	z-index: 1000;
+	display: none;
+
+}
+
+#tablecard4{
+	position: absolute;
+	top:38%;
+	left: 50%;
+	z-index: 1000;
+	display: none;
+}
+#tableclick{
+position: absolute;
+    width: 36%;
+    height: 45%;
+    top: 27%;
+    left: 29%;
+    z-index: 2400;
+    border: 20px solid #10671d;
+    border-radius: 50%
+}
+
+.scorePage {   
+	background-color: #d8a51b;
+	position: absolute;
+	width: 70%;
+	height:80%;
+	top:10%;
+	left:15%;
+	z-index: 2500;
+/*	border: 2px solid red;*/
+	display: block;
+	
+	
+}
+.humanPoints{
+	z-index: 100000;
+	position: relative;
+	display: block;
+}
+.scorePage img{
+width: 5%;
+height: 10%;
+	display:none;
+	
+}
+.scorePage h4{
+	text-align: center;
+	color: #4e4040;
+	font-size: 50px;
+	
+}
+.CPU1Points{
+	z-index: 100000;
+	position: relative;
+	display: block;
+}
+.CPU2Points{
+	z-index: 100000;
+	position: relative;
+	display: block;
+}
+.CPU3Points{
+	z-index: 100000;
+	position: relative;
+	display: block;
+}
+
+/*Button*/
+/*
+.nextRoundBut{
+	position: absolute;
+	left: 0%;
+	top: 0%;
+	height: 100%;
+	width: 100%;
+	border: 2px solid red;
+	background: orange;
+	cursor: pointer;
+	z-index: 100;
+}
+*/
+
+
+
+/*
+#CPU1ScoreCards1{
+	display: none;
+}
+#CPU1ScoreCards2{
+	display: none;
+}
+#CPU1ScoreCards3{
+	display: none;
+}
+#CPU1ScoreCards4{
+	display: none;
+}
+#CPU1ScoreCards5{
+	display: none;
+}
+#humanScoreCards1{
+	display: none;
+}
+#humanScoreCards2{
+	display: none;
+}
+#humanScoreCards3{
+	display: none;
+}
+#humanScoreCards4{
+	display: none;
+}
+#humanScoreCards5{
+	display: none;
+}
+*/
+
+
+/* phone */
+@media only screen and (max-width: 800px){
+.allgame img {
+
+width: 27px;
+height: 40px;	
+	}
+.player1card {
+    top: 69%;
+	left: 6%;
+	}	
+.player1card img{
+width: 31px;
+    height: 60px;
+    margin-right: -3px;
+	}	
+.player2card{
+    top: 20%;
+    left: 8%;
+	height: 17%;
+
+	
+	}		
+.player2card img{
+margin-top: -11px;		
+	}	
+	
+.player3card{
+    top: 7%;
+    left: 12%;	
+	
+	}	
+.player3card img{
+/*margin-right: -11px;		*/
+	}
+.player4card{
+    top: 20%;
+    left: 78%;
+	height: 17%;
+
+	
+	}		
+.player4card img{
+margin-top: -11px;		
+	}
+	
+	
+	
+#tableclick {
+	border: 7px solid #10671d;
+    position: absolute;
+    width: 35%;
+    height: 35%;
+    top: 25%;
+    left: 32%;
+	}
+#tablecard1 {
+    
+	top: 47%;	
+	width: 31px;
+    height: 60px;
+    margin-right: -3px;
+}
+#tablecard2 {
+    
+	left: 36%;	
+	width: 31px;
+    height: 60px;
+    margin-right: -3px;
+}
+#tablecard3 {
+    
+	top:31%;	
+	width: 31px;
+    height: 60px;
+    margin-right: -3px;
+}
+#tablecard4 {
+    
+	left:54%;	
+	width: 31px;
+    height: 60px;
+    margin-right: -3px;
+}
+	
+
+#dark1{
+position: absolute;
+	left:44%;
+	bottom: 10%;
+	display: none;
+	
+}
+#dark2{
+position: absolute;
+	left:10%;
+	bottom: 48%;
+	display: none;
+	
+}
+#dark3{
+position: absolute;
+	left:44%;
+	top: 7%;
+	display: none;
+	
+}
+#dark4{
+position: absolute;
+	right:10%;
+	bottom: 44%;
+	display: none;
+	
+	
+}
+
+
+
+
+
+
+
+
+
+
