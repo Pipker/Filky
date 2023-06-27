@@ -29,6 +29,7 @@ let text;
 let humanplay= false;
 let darkGame=false;
 let darkIndex;
+
 /******** PLAYERS *******************/
 
 let players= function(index,tableCardId,handCardId,totalScoreId,scoreId,scoreCardsId,fakeScore,order,totalScore,cardsOnHands,score,zaludCards,kuleCards,redCards,fakecardsOnHands,greenCards,fakeRedCards,fakeGreenCards,fakeZaludCards,fakeKuleCards){
@@ -2298,7 +2299,12 @@ order();
 }
 
 function game(){
-
+	console.log(cardsOnTable)
+	console.log(round)
+	console.log(human.order)
+	console.log(CPU1.order)
+	console.log(CPU2.order)
+	console.log(CPU3.order)
  if (CPU1.order===1){
 	
 	CPU1.play();
@@ -2706,7 +2712,7 @@ if(round<9&&highestcard==cardsOnTable[0]){
 	darkGameFn();
 }
 else if(round<9&&highestcard!=cardsOnTable[0]){
-			
+			console.log("tma předčasně ukončena")
 	document.querySelector("body").style.background="linear-gradient( #c35d38 65%, #341d07)";
 		darkGame=false;
 		for(i=1;i<5;i++){
@@ -2788,12 +2794,23 @@ CPU3.kuleCards.push(CPU3.cardsOnHands[i]);
 	// END ROUND************	
 		
 	else {
+		
+		document.querySelector("body").style.background="linear-gradient( #c35d38 65%, #341d07)";
+		
+
+		for(i=1;i<5;i++){
+		document.getElementById("dark"+i).style.display="none";
+		}
+		console.log("tma výtězně ukončena")
+		console.log(round)
+		console.log(darkGame)
 		totalScored();
 		document.querySelector(".scorePage").style.display="block";
 	}}
 text=[];
 }
 function nextRound(){
+	console.log(darkGame)
 	if(darkGame==false){
 	if(round==9||round==1){
 	human.order=0;
@@ -2840,6 +2857,7 @@ dealCards();
 game();	
 }}
 else if(darkGame==true){
+
 	dark();
 }}
 //fílek ve hře?
@@ -3058,6 +3076,7 @@ CPU2.darkPlay();
 /***score****/
 
  function totalScored(){
+	cardsOnTable=[]
 	nullSum=0;
 	if (human.score==0){
 	nullSum=nullSum+1;	
@@ -3164,7 +3183,7 @@ CPU3.totalScore=CPU3.totalScore-CPU3.score;
 }
 
 else if(human.score==6&&darkGame==true){
-
+	darkGame=false
 	human.score=-18;	
 human.totalScore=human.totalScore+(tableScore+18);
 CPU1.score=6;
@@ -3184,8 +3203,7 @@ for(i=1;i<5;i++){
 }	
 
 else if(CPU1.score==6&&darkGame==true){
-
-
+	darkGame=false
 CPU1.score=-18;	
 CPU1.totalScore=CPU1.totalScore+(tableScore+18);
 CPU2.score=6;
@@ -3205,7 +3223,7 @@ for(i=1;i<5;i++){
 }	
 
 else if(CPU2.score==6&&darkGame==true){
-
+	darkGame=false
 CPU2.score=-18;	
 CPU2.totalScore=CPU2.totalScore+(tableScore+18);
 CPU1.score=6;
@@ -3225,7 +3243,7 @@ for(i=1;i<5;i++){
 }	
 
 else if(CPU3.score==6&&darkGame==true){
-
+	darkGame=false
 CPU3.score=-18;	
 CPU3.totalScore=CPU3.totalScore+(tableScore+18);
 CPU1.score=6;
