@@ -3184,7 +3184,7 @@ CPU3.totalScore=CPU3.totalScore-CPU3.score;
 
 else if(human.score==6&&darkGame==true){
 	darkGame=false
-	human.score=-18;	
+	human.score=-1*(tableScore+18);	
 human.totalScore=human.totalScore+(tableScore+18);
 CPU1.score=6;
 CPU1.totalScore=CPU1.totalScore-6;
@@ -3204,7 +3204,7 @@ for(i=1;i<5;i++){
 
 else if(CPU1.score==6&&darkGame==true){
 	darkGame=false
-CPU1.score=-18;	
+CPU1.score=-1*(tableScore+18);	
 CPU1.totalScore=CPU1.totalScore+(tableScore+18);
 CPU2.score=6;
 CPU2.totalScore=CPU2.totalScore-6;
@@ -3224,7 +3224,7 @@ for(i=1;i<5;i++){
 
 else if(CPU2.score==6&&darkGame==true){
 	darkGame=false
-CPU2.score=-18;	
+CPU2.score=-1*(tableScore+18);	
 CPU2.totalScore=CPU2.totalScore+(tableScore+18);
 CPU1.score=6;
 CPU1.totalScore=CPU1.totalScore-6;
@@ -3244,7 +3244,7 @@ for(i=1;i<5;i++){
 
 else if(CPU3.score==6&&darkGame==true){
 	darkGame=false
-CPU3.score=-18;	
+CPU3.score=-1*(tableScore+18);
 CPU3.totalScore=CPU3.totalScore+(tableScore+18);
 CPU1.score=6;
 CPU1.totalScore=CPU1.totalScore-6;
